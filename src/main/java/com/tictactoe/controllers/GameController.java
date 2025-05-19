@@ -1,22 +1,22 @@
-package controllers;
+package com.tictactoe.controllers;
 
 import java.util.Scanner;
 
-import models.Game;
-import views.GameView;
+import com.tictactoe.models.Game;
+import com.tictactoe.views.GameView;
 
 public class GameController {
     private Game game;
     private GameView view;
     private Scanner scanner;
 
-    public GameController(){
+    public GameController() {
         game = new Game();
         view = new GameView(game);
         scanner = new Scanner(System.in);
     }
 
-    public void StartGame(){
+    public void startGame() {
         view.displayWelcome();
         while (!game.isGameOver()) {
             view.displayBoard();
@@ -25,9 +25,9 @@ public class GameController {
             try {
                 int row = scanner.nextInt();
                 int col = scanner.nextInt();
-            if (!game.makeMove(row,col)) {
-                view.displayInvalidMove();
-            }
+                if (!game.makeMove(row, col)) {
+                    view.displayInvalidMove();
+                }
             } catch (Exception e) {
                 scanner.nextLine();
                 view.displayInvalidMove();
@@ -38,6 +38,3 @@ public class GameController {
         scanner.close();
     }
 }
-
-
-
