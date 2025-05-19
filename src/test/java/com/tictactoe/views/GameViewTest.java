@@ -1,4 +1,4 @@
-package views;
+package com.tictactoe.views;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,5 @@
-package models;
+package com.tictactoe.models;
+
 
 import org.junit.jupiter.api.Test;
 

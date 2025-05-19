@@ -1,4 +1,4 @@
-package models;
+package com.tictactoe.models;
 
 public class Game {
     private Board board;
@@ -8,18 +8,17 @@ public class Game {
     private boolean gameOver;
     private String lastError;
 
-
     public Game() {
         board = new Board();
-        currentPlayer = playerX;
         playerX = new Player('X');
         playerO = new Player('O');
+        currentPlayer = playerX;
         gameOver = false;
         lastError = null;
     }
 
     public boolean makeMove(int row, int col) {
-        lastError= null;
+        lastError = null;
 
         if (row < 0 || row > 2 || col < 0 || col > 2) {
             lastError = "Coordinates must be between 0 and 2";
@@ -39,11 +38,9 @@ public class Game {
         if (board.makeMove(row, col, currentPlayer.getSymbol())) {
             if (board.checkWinner(currentPlayer.getSymbol())) {
                 gameOver = true;
-            }
-            else if (board.isFull()) {
+            } else if (board.isFull()) {
                 gameOver = true;
-            }
-            else {
+            } else {
                 currentPlayer = (currentPlayer == playerX) ? playerO : playerX;
             }
             return true;
@@ -73,11 +70,9 @@ public class Game {
         }
         if (board.checkWinner('X')) {
             return playerX.getName() + " wins!";
-        }
-        else if (board.checkWinner('O')) {
+        } else if (board.checkWinner('O')) {
             return playerO.getName() + " wins!";
-        }
-        else {
+        } else {
             return "It's a draw!";
         }
     }
