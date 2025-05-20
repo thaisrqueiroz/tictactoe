@@ -22,14 +22,26 @@ public class GameController {
             view.displayBoard();
             view.displayGameStatus();
             System.out.print("Enter coordinates (row column): ");
+            String input = scanner.nextLine().trim();
+
+            if (input.isEmpty()) {
+                view.displayInvalidMove();
+                continue;
+            }
+
+            String[] coordinates = input.split("\\s+");
+            if (coordinates.length != 2) {
+                System.out.println("Please enter coordinates in format: row column (with space between numbers)");
+                continue;
+            }
+
             try {
-                int row = scanner.nextInt();
-                int col = scanner.nextInt();
+                int row = Integer.parseInt(coordinates[0]);
+                int col = Integer.parseInt(coordinates[1]);
                 if (!game.makeMove(row, col)) {
                     view.displayInvalidMove();
                 }
-            } catch (Exception e) {
-                scanner.nextLine();
+            } catch (NumberFormatException e) {
                 view.displayInvalidMove();
             }
         }
