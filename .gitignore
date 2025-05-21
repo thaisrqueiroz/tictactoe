@@ -38,4 +38,4 @@ target/
 *.ear
 *.zip
 *.tar
-*.gz
+*.gz.idea/
