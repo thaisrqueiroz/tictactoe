@@ -39,3 +39,5 @@ target/
 *.zip
 *.tar
 *.gz.idea/
+
+.idea/

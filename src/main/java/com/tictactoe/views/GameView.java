@@ -4,7 +4,8 @@ import com.tictactoe.models.Board;
 import com.tictactoe.models.Game;
 
 public class GameView {
-    private Game game;
+    private final Game game;
+    private final boolean emojiMode;
 
     private static final String RESET = "\u001B[0m";
     private static final String RED = "\u001B[31m";
@@ -15,7 +16,20 @@ public class GameView {
     private static final String CYAN = "\u001B[36m";
 
     public GameView(Game game) {
+        this(game, true);
+    }
+
+    public GameView(Game game, boolean emojiMode) {
         this.game = game;
+        this.emojiMode = emojiMode;
+    }
+
+    private String getHeartSymbol() {
+        if (emojiMode) {
+            return " ❤️";
+        } else {
+            return " ♥";
+        }
     }
 
     public void displayBoard() {
@@ -37,7 +51,7 @@ public class GameView {
     public void displayGameStatus() {
         String status = game.getGameStatus();
         if (status.contains("wins")) {
-            System.out.println(GREEN + status + " ❤️" + RESET);
+            System.out.println(GREEN + status + getHeartSymbol() + RESET);
         } else {
             System.out.println(YELLOW + status + RESET);
         }
