@@ -9,8 +9,8 @@ This project is a console-based implementation of the classic Tic Tac Toe game. 
 ## 🛠️ Technologies
 
 - Java 21 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-- Maven ![Maven]((https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white))
-- JUnit 5 ![JUnit]((https://img.shields.io/badge/Junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white))
+- Maven ![Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+- JUnit 5 ![JUnit](https://img.shields.io/badge/Junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 - Git ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 - IntelliJ IDEA ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 
