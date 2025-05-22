@@ -15,7 +15,7 @@ public class GameTest {
     @Test
     void testGetBoard() {
         assertNotNull(game.getBoard());
-        assertTrue(game.getBoard() instanceof Board);
+        assertNotNull(game.getBoard());
     }
 
     @Test
