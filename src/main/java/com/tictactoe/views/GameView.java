@@ -4,7 +4,7 @@ import com.tictactoe.models.Board;
 import com.tictactoe.models.Game;
 
 public class GameView {
-    private Game game;
+    private final Game game;
 
     private static final String RESET = "\u001B[0m";
     private static final String RED = "\u001B[31m";

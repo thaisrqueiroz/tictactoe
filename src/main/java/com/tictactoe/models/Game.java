@@ -1,10 +1,10 @@
 package com.tictactoe.models;
 
 public class Game {
-    private Board board;
+    private final Board board;
     private Player currentPlayer;
-    private Player playerX;
-    private Player playerO;
+    private final Player playerX;
+    private final Player playerO;
     private boolean gameOver;
     private String lastError;
 

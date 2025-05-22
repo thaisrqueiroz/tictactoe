@@ -2,7 +2,7 @@ package com.tictactoe.models;
 
 public class Player {
     private final char symbol;
-    private String name;
+    private final String name;
 
     public Player(char symbol) {
         this.symbol = symbol;
