@@ -10,8 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class GameControllerTest { 
-    private GameController controller;
+public class GameControllerTest {
     private ByteArrayOutputStream outputStream;
     private ByteArrayInputStream inputStream;
     private PrintStream originalOut;
@@ -28,7 +27,7 @@ public class GameControllerTest {
         if (inputStream != null) {
             try {
              inputStream.close();   
-            } catch (IOException e) {
+            } catch (IOException ignored) {
             }
         }
     }
@@ -38,7 +37,7 @@ public class GameControllerTest {
         String input = "0 0\n1 1\n0 1\n1 0\n0 2\n";
         inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
-        controller = new GameController();
+        GameController controller = new GameController();
         controller.startGame();
         String output = outputStream.toString();
         assertTrue(output.contains("Welcome to Tic Tac Toe"));
