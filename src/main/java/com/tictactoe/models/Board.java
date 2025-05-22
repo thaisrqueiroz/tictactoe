@@ -2,7 +2,7 @@ package com.tictactoe.models;
 
 public class Board {
     private static final int SIZE = 3;
-    private char[][] board;
+    private final char[][] board;
     private int movesCount;
 
     public Board() {
@@ -58,9 +58,6 @@ public class Board {
         if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
             return true;
         }
-        if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
-            return true;
-        }
-        return false;
+        return board[0][2] == player && board[1][1] == player && board[2][0] == player;
     }
 }

@@ -6,9 +6,9 @@ import com.tictactoe.models.Game;
 import com.tictactoe.views.GameView;
 
 public class GameController {
-    private Game game;
-    private GameView view;
-    private Scanner scanner;
+    private final Game game;
+    private final GameView view;
+    private final Scanner scanner;
 
     public GameController() {
         game = new Game();
